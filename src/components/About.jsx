@@ -40,7 +40,7 @@ const About = () => {
               <img
                 src="images/final.webp"
                 alt="Profile"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-fit"
               />
             </div>
             

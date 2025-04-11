@@ -7,24 +7,24 @@ const FAQAccordion = () => {
 
   const faqItems = [
     {
-      question: "What types of projects do you work on?",
-      answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere."
+      question: "What technologies do you specialize in?",
+      answer: "I'm a MERN Stack Developer specializing in React, Next.js, and Tailwind CSS. I build fast, mobile-friendly, and scalable websites with a focus on performance optimization and SEO."
     },
     {
-      question: "How long does a typical project take?",
-      answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+      question: "Do you offer SEO services?",
+      answer: "Yes, I have strong experience in SEO optimization. I focus on creating websites that not only look great but also load quickly and help businesses grow their online presence through effective SEO strategies."
     },
     {
-      question: "What is your design process?",
-      answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+      question: "What other services do you provide besides web development?",
+      answer: "Along with web development, I offer digital marketing services including Google My Business optimization, logo design, video editing, and content creation. I work with a team of skilled professionals to deliver complete digital solutions."
     },
     {
-      question: "Can I update the website on my own after it's live?",
-      answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+      question: "How does your team approach projects?",
+      answer: "I collaborate with a team of experts in various fields. Whether it's design, SEO, video production, or content creation, we work together to deliver comprehensive digital solutions that bring real results for our clients worldwide."
     },
     {
-      question: "Do you offer ongoing support after the website launch?",
-      answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+      question: "What makes your websites stand out?",
+      answer: "My websites are built with modern tools and frameworks to ensure they are fast, mobile-friendly, and scalable. I prioritize both aesthetics and performance, creating sites that look great while loading quickly and ranking well in search engines."
     }
   ];
 
