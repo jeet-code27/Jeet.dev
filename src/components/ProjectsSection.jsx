@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-const ProjectCard = ({ title, category, description, imageSrc }) => {
+const ProjectCard = ({ title, category, description, imageSrc, projectLink }) => {
   return (
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
@@ -35,13 +35,15 @@ const ProjectCard = ({ title, category, description, imageSrc }) => {
         </div>
 
         <div className="p-8 pt-6">
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-black text-white px-8 py-4 rounded-full font-medium w-full text-lg"
-          >
-            Open Project
-          </motion.button>
+          <Link to={projectLink} target='_blank'>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-black t text-white px-8 py-4 rounded-full font-medium w-full text-lg"
+            >
+              Open Project
+            </motion.button>
+          </Link>
         </div>
       </div>
 
@@ -57,13 +59,15 @@ const ProjectCard = ({ title, category, description, imageSrc }) => {
             <p className="text-gray-600 text-lg leading-relaxed">{description}</p>
           </div>
           
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-black text-white px-10 py-4 rounded-full font-medium text-lg w-fit"
-          >
-            Open Project
-          </motion.button>
+          <Link to={projectLink} target='_blank'>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-black text-white px-10 py-4 rounded-full font-medium text-lg w-fit"
+            >
+              Open Project
+            </motion.button>
+          </Link>
         </div>
         
         <motion.div 
@@ -84,35 +88,45 @@ const ProjectCard = ({ title, category, description, imageSrc }) => {
 
 function ProjectsSection() {
   return (
-    <div className="min-h-screen  py-24 px-6">
+    <div className="min-h-screen py-24 px-6">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         className="max-w-7xl mx-auto"
       >
-        <h1 className="text-5xl md:text-6xl font-serif text-center mb-20">
+        <h1 className="text-5xl md:text-6xl font-serif text-center mb-6">
           Explore my Projects
         </h1>
         
+        <p className="text-xl text-gray-600 text-center max-w-3xl mx-auto mb-20">
+          I handle a wide range of projects, from sleek personal portfolios to dynamic content-driven websites. Just share your vision, and we'll bring it to life together.
+        </p>
+        
         <div className="space-y-12">
           <ProjectCard 
-            category="Print Campaign"
-            title="Branding Strategy for EcoFriendly"
-            description="Creation of a branding strategy to enhance market presence and engagement."
-            imageSrc="/api/placeholder/800/600"
+            category="Hiring Support"
+            title="Hiring Support System – Ambuja Foundation"
+            description="A user-role-based hiring support system designed to streamline HR processes and enhance candidate selection."
+            imageSrc="/images/ambujafoundation.png"
+            projectLink="https://hiringsupportaf.in/"
           />
-           <ProjectCard 
-            category="Print Campaign"
-            title="Branding Strategy for EcoFriendly"
-            description="Creation of a branding strategy to enhance market presence and engagement."
-            imageSrc="/api/placeholder/800/600"
-          />
-           <ProjectCard 
-            category="Print Campaign"
-            title="Branding Strategy for EcoFriendly"
-            description="Creation of a branding strategy to enhance market presence and engagement."
-            imageSrc="/api/placeholder/800/600"
+
+<ProjectCard 
+  category="Doctor Website"
+  title="Bone and Joints – Orthopaedic Surgeon Website"
+  description="A modern website built for an orthopaedic surgeon featuring patient consultation booking and an admin panel to manage and view appointments."
+  imageSrc="/images/boneandjoints.png"
+  projectLink="https://boneandjoints.in/"
+/>
+
+
+          <ProjectCard 
+            category="Architecture & Design"
+            title="DS Concept – Architecture & Design "
+            description="A modern architectural firm website showcasing projects with a seamless content management system and intuitive UI."
+            imageSrc="/images/dsc.png"
+            projectLink="https://dsconcept.in/"
           />
         </div>
 
@@ -121,15 +135,13 @@ function ProjectsSection() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            {/* <Link 
-              to="/" 
+            <Link 
+              to="/work" 
               className="inline-flex items-center gap-2 text-lg font-medium text-black hover:text-gray-700 transition-colors"
-            > */}
-            <div className='inline-flex items-center gap-2 text-lg font-medium text-black hover:text-gray-700 transition-colors cursor-pointer'>
+            >
               See all projects 
               <ArrowRight className="w-5 h-5" />
-              </div>
-            {/* </Link> */}
+            </Link>
           </motion.div>
         </div>
       </motion.div>
@@ -137,4 +149,4 @@ function ProjectsSection() {
   );
 }
 
-export default ProjectsSection; 
+export default ProjectsSection;

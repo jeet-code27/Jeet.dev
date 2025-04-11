@@ -1,7 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+
+  const [errors, setErrors] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
   const fadeIn = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
@@ -25,9 +42,106 @@ const Contact = () => {
     }
   };
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+    // Clear error when user types
+    if (errors[name]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }));
+    }
+  };
+
+  const validate = () => {
+    let valid = true;
+    const newErrors = {
+      name: '',
+      email: '',
+      phone: '',
+      message: ''
+    };
+
+    if (!formData.name.trim()) {
+      newErrors.name = 'Name is required';
+      valid = false;
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+      valid = false;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email';
+      valid = false;
+    }
+
+    if (formData.phone && !/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/.test(formData.phone)) {
+      newErrors.phone = 'Please enter a valid phone number';
+      valid = false;
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required';
+      valid = false;
+    } else if (formData.message.trim().length < 10) {
+      newErrors.message = 'Message should be at least 10 characters';
+      valid = false;
+    }
+
+    setErrors(newErrors);
+    return valid;
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    if (!validate()) return;
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "49a450d2-055d-4f81-a72e-5e9513d20147",
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message
+        }),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          message: ''
+        });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(() => setSubmitStatus(null), 3000);
+    }
+  };
+
   return (
     <div className="min-h-screen p-8">
-         <div 
+      <div 
         className="fixed inset-0 bg-repeat opacity-30 -z-10"
         style={{
           backgroundImage: "url('images/background.png')",
@@ -75,40 +189,94 @@ const Contact = () => {
           </div>
         </motion.div>
 
+        {submitStatus === 'success' && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-6 p-4 bg-green-100 text-green-800 rounded-lg"
+          >
+            Thank you! Your message has been sent successfully.
+          </motion.div>
+        )}
+
+        {submitStatus === 'error' && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-6 p-4 bg-red-100 text-red-800 rounded-lg"
+          >
+            Oops! Something went wrong. Please try again later.
+          </motion.div>
+        )}
+
         <motion.form 
           className="space-y-6"
           {...fadeIn}
           transition={{ delay: 0.4 }}
+          onSubmit={handleSubmit}
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <motion.input
+                whileFocus={{ scale: 1.02 }}
+                type="text"
+                name="name"
+                placeholder="Name"
+                value={formData.name}
+                onChange={handleChange}
+                className="w-full p-4 rounded-lg bg-white border border-gray-200 focus:outline-none focus:border-pink-300 transition-colors"
+              />
+              {errors.name && <p className="mt-1 text-sm text-red-500">{errors.name}</p>}
+            </div>
+            <div>
+              <motion.input
+                whileFocus={{ scale: 1.02 }}
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full p-4 rounded-lg bg-white border border-gray-200 focus:outline-none focus:border-pink-300 transition-colors"
+              />
+              {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email}</p>}
+            </div>
+          </div>
+
+          <div>
             <motion.input
               whileFocus={{ scale: 1.02 }}
-              type="text"
-              placeholder="Name"
+              type="tel"
+              name="phone"
+              placeholder="Phone Number"
+              value={formData.phone}
+              onChange={handleChange}
               className="w-full p-4 rounded-lg bg-white border border-gray-200 focus:outline-none focus:border-pink-300 transition-colors"
             />
-            <motion.input
-              whileFocus={{ scale: 1.02 }}
-              type="email"
-              placeholder="Email"
-              className="w-full p-4 rounded-lg bg-white border border-gray-200 focus:outline-none focus:border-pink-300 transition-colors"
-            />
+            {errors.phone && <p className="mt-1 text-sm text-red-500">{errors.phone}</p>}
           </div>
           
-          <motion.textarea
-            whileFocus={{ scale: 1.02 }}
-            placeholder="Your message for me"
-            rows={6}
-            className="w-full p-4 rounded-lg bg-white border border-gray-200 focus:outline-none focus:border-pink-300 transition-colors"
-          />
+          <div>
+            <motion.textarea
+              whileFocus={{ scale: 1.02 }}
+              name="message"
+              placeholder="Your message for me"
+              rows={6}
+              value={formData.message}
+              onChange={handleChange}
+              className="w-full p-4 rounded-lg bg-white border border-gray-200 focus:outline-none focus:border-pink-300 transition-colors"
+            />
+            {errors.message && <p className="mt-1 text-sm text-red-500">{errors.message}</p>}
+          </div>
 
           <motion.button
             variants={buttonVariants}
             whileHover="hover"
             whileTap="tap"
-            className="px-8 py-3 bg-black text-white rounded-lg font-medium hover:opacity-90 transition-opacity"
+            type="submit"
+            disabled={isSubmitting}
+            className="px-8 py-3 bg-black text-white rounded-lg font-medium hover:opacity-90 transition-opacity disabled:opacity-70 disabled:cursor-not-allowed"
           >
-            Submit
+            {isSubmitting ? 'Sending...' : 'Submit'}
           </motion.button>
         </motion.form>
       </motion.div>

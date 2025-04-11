@@ -1,39 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 
 const ImageSlider = () => {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+
   const images = [
     {
       id: 1,
-      url: "/api/placeholder/800/500",
+      url: "/images/boneandjointslaptop.png",
       alt: "Design mockup with yellow background"
     },
     {
       id: 2,
-      url: "/api/placeholder/800/500",
+      url: "/images/ambuja.png",
       alt: "iMac display with orange screen"
     },
     {
       id: 3,
-      url: "/api/placeholder/800/500",
+      url: "/images/dsc-laptop.png",
       alt: "Typography design mockup"
     },
     {
       id: 4,
-      url: "/api/placeholder/800/500",
+      url: "/images/seo-laptop.png",
       alt: "Design sample 4"
     },
     {
       id: 5,
-      url: "/api/placeholder/800/500",
+      url: "/images/morganics-laptop.png",
       alt: "Design sample 5"
     },
     {
       id: 6,
-      url: "/api/placeholder/800/500",
+      url: "/images/port-laptop.png",
       alt: "Design sample 6"
+    },
+    {
+      id: 7,
+      url: "/images/hotel-laptop.png",
+      alt: "Design sample 7"
     }
   ];
 
@@ -85,6 +93,29 @@ const ImageSlider = () => {
     );
   };
 
+  const openLightbox = (index) => {
+    setSelectedImageIndex(index);
+    setLightboxOpen(true);
+    document.body.style.overflow = 'hidden'; // Prevent scrolling when lightbox is open
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+    document.body.style.overflow = 'auto'; // Re-enable scrolling
+  };
+
+  const goToPrevious = () => {
+    setSelectedImageIndex((prevIndex) => 
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  const goToNext = () => {
+    setSelectedImageIndex((prevIndex) => 
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
   return (
     <div className="w-full px-8">
       <div className="relative">
@@ -100,8 +131,12 @@ const ImageSlider = () => {
           containerClass="pb-12"
           itemClass="px-2"
         >
-          {images.map((image) => (
-            <div key={image.id} className="relative aspect-[4/3] w-full group">
+          {images.map((image, index) => (
+            <div 
+              key={image.id} 
+              className="relative aspect-[4/3] w-full group cursor-pointer"
+              onClick={() => openLightbox(index)}
+            >
               <img
                 src={image.url}
                 alt={image.alt}
@@ -112,6 +147,62 @@ const ImageSlider = () => {
           ))}
         </Carousel>
       </div>
+
+      {/* Lightbox */}
+      {lightboxOpen && (
+        <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
+          <button 
+            onClick={closeLightbox}
+            className="absolute top-4 right-4 p-2 rounded-full bg-white/20 hover:bg-white/30 transition-all duration-300"
+          >
+            <X className="w-8 h-8 text-white" />
+          </button>
+
+          <div className="relative w-full max-w-6xl h-full max-h-[90vh] flex items-center">
+            <button 
+              onClick={(e) => {
+                e.stopPropagation();
+                goToPrevious();
+              }}
+              className="absolute left-4 p-3 rounded-full bg-white/20 hover:bg-white/30 transition-all duration-300 z-10"
+            >
+              <ChevronLeft className="w-8 h-8 text-white" />
+            </button>
+
+            <div className="w-full h-full flex items-center justify-center">
+              <img
+                src={images[selectedImageIndex].url}
+                alt={images[selectedImageIndex].alt}
+                className="max-w-full max-h-full object-contain rounded-lg"
+              />
+            </div>
+
+            <button 
+              onClick={(e) => {
+                e.stopPropagation();
+                goToNext();
+              }}
+              className="absolute right-4 p-3 rounded-full bg-white/20 hover:bg-white/30 transition-all duration-300 z-10"
+            >
+              <ChevronRight className="w-8 h-8 text-white" />
+            </button>
+          </div>
+
+          <div className="absolute bottom-8 left-0 right-0 flex justify-center">
+            <div className="flex space-x-2">
+              {images.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setSelectedImageIndex(index)}
+                  className={`h-3 w-3 rounded-full transition-all duration-300 ${
+                    index === selectedImageIndex ? "bg-white scale-125" : "bg-white/40 hover:bg-white/60"
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

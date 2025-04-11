@@ -1,7 +1,6 @@
-
 import React from 'react';
 
-const ProjectCard = ({ title, subtitle, description, category, imageSrc }) => {
+const ProjectCard = ({ title, subtitle, description, category, imageSrc, projectLink }) => {
   return (
     <div className="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 w-full max-w-[1000px] mx-auto">
       {/* Image Section - Always at top */}
@@ -33,9 +32,11 @@ const ProjectCard = ({ title, subtitle, description, category, imageSrc }) => {
           </p>
         </div>
         
-        <button className="mt-8 bg-black text-white px-8 py-4 rounded-full font-medium text-lg w-full md:w-auto hover:bg-gray-800 transition-colors duration-200">
-          Open Project
-        </button>
+        <a href={projectLink} target="_blank" rel="noopener noreferrer">
+          <button className="mt-8 bg-black text-white px-8 py-4 rounded-full font-medium text-lg w-full md:w-auto hover:bg-gray-800 transition-colors duration-200">
+            Open Project
+          </button>
+        </a>
       </div>
     </div>
   );
@@ -46,7 +47,7 @@ const Work = () => {
   return (
     <div className="min-h-screen  py-20 px-6">
 
-<div 
+      <div 
         className="fixed inset-0 bg-repeat opacity-30 -z-10"
         style={{
           backgroundImage: "url('images/background.png')",
@@ -65,32 +66,69 @@ const Work = () => {
         }}
       />
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-5xl md:text-6xl font-serif text-center mb-20">
+        <h1 className="text-5xl md:text-6xl font-serif text-center mb-4">
           Current Projects & Activities
         </h1>
         
+        <p className="text-lg text-center text-gray-700 mb-20 max-w-3xl mx-auto">
+          I handle a wide range of projects, from sleek personal portfolios to dynamic content-driven websites. Just share your vision, and we'll bring it to life together.
+        </p>
+        
         <div className="space-y-8">
-          <ProjectCard 
-            category="Print Campaign"
-            title="Branding Strategy for EcoFriendly"
-            subtitle="EcoFriendly"
-            description="Creation of a branding strategy to enhance market presence and engagement."
-            imageSrc="/api/placeholder/800/600"
+        <ProjectCard 
+            category="Hiring Support"
+            title="Hiring Support System – Ambuja Foundation"
+            description="A user-role-based hiring support system designed to streamline HR processes and enhance candidate selection."
+            imageSrc="/images/ambuja.png"
+            projectLink="https://hiringsupportaf.in/"
           />
-            <ProjectCard 
-            category="Print Campaign"
-            title="Branding Strategy for EcoFriendly"
-            subtitle="EcoFriendly"
-            description="Creation of a branding strategy to enhance market presence and engagement."
-            imageSrc="/api/placeholder/800/600"
-          />
-            <ProjectCard 
-            category="Print Campaign"
-            title="Branding Strategy for EcoFriendly"
-            subtitle="EcoFriendly"
-            description="Creation of a branding strategy to enhance market presence and engagement."
-            imageSrc="/api/placeholder/800/600"
-          />
+
+        <ProjectCard 
+          category="Doctor Website"
+          title="Bone and Joints – Orthopaedic Surgeon Website"
+          description="A modern website built for an orthopaedic surgeon featuring patient consultation booking and an admin panel to manage and view appointments."
+          imageSrc="/images/boneandjointslaptop.png"
+          projectLink="https://boneandjoints.in/"
+        />
+
+        <ProjectCard 
+          category="Architecture & Design"
+          title="DS Concept – Architecture & Design "
+          description="A modern architectural firm website showcasing projects with a seamless content management system and intuitive UI."
+          imageSrc="/images/dsc-laptop.png"
+          projectLink="https://dsconcept.in/"
+        />
+        
+        <ProjectCard 
+          category="Pharmaceutical Website"
+          title="Morganics"
+          description="A sleek and professional pharmaceutical company website built with Next.js, featuring fast performance and fully optimized for search engines."
+          imageSrc="/images/morganics-laptop.png"
+          projectLink="https://morganics.in/"
+        />
+
+        <ProjectCard 
+          category="Digital Marketing Website"
+          title="Seocial Media Solutions – Digital Marketing Agency"
+          description="A fully responsive React-based website for a digital marketing company, designed to showcase services, client results, and drive conversions."
+          imageSrc="/images/seo-laptop.png"
+          projectLink="https://seocialmedia.in/"
+        />
+        
+        <ProjectCard 
+          category="Hotel Website"
+          title="Sarovar Portico – Premium Hotel Website"
+          description="A modern and elegant hotel website highlighting rooms, amenities, and bookings, crafted for an exceptional user experience and seamless mobile responsiveness."
+          imageSrc="/images/hotel-laptop.png"
+          projectLink="https://sarovar-portico-hotel.vercel.app/"
+        />
+        <ProjectCard 
+  category="Portfolio Website"
+  title="Personal Portfolio – HTML, CSS & JavaScript"
+  description="My first personal portfolio website built using HTML, CSS, and JavaScript, showcasing my projects, skills, and contact information with a clean and simple layout."
+  imageSrc="/images/port-laptop.png"
+  projectLink="https://jeet-code27.github.io/jeetendra.github.io/"
+/>
         </div>
       </div>
     </div>

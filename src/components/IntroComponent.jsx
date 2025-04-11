@@ -5,11 +5,9 @@ const IntroComponent = () => {
   const [showWave, setShowWave] = useState(false);
 
   useEffect(() => {
-    // Wait for initial animations to complete before showing the wave
     const timer = setTimeout(() => {
       setShowWave(true);
-    }, 2000); // 2 seconds delay to allow initial animations to complete
-
+    }, 2000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -23,22 +21,19 @@ const IntroComponent = () => {
           className="group perspective w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mx-auto mb-6 sm:mb-8"
         >
           <div className="relative w-full h-full transition-transform duration-500 preserve-3d group-hover:rotate-y-180">
-            {/* Front of card */}
             <div className="absolute w-full h-full backface-hidden rounded-2xl overflow-hidden shadow-lg">
               <img
-                src="images/signature.svg"
+                src="images/finall.png"
                 alt="Profile"
                 className="w-full h-full object-fit border-4 border-white"
               />
             </div>
-            
-            {/* Back of card */}
             <div className="absolute w-full h-full backface-hidden rounded-2xl overflow-hidden shadow-lg bg-blue-600 rotate-y-180 flex items-center justify-center text-white p-4">
               <p className="text-lg font-medium">Hello World! 👋</p>
             </div>
           </div>
         </motion.div>
-        
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -75,7 +70,6 @@ const IntroComponent = () => {
                 className="flex items-center gap-2"
               >
                 <span className="hover:scale-125 transition-transform duration-300">👋</span>
-                
               </motion.div>
             )}
             <motion.h1 
@@ -84,10 +78,10 @@ const IntroComponent = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1, duration: 0.8 }}
             >
-              I'm Jeetendra.
+              I'm Jeetendra 
             </motion.h1>
           </div>
-          
+
           <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-slate-700">
             <motion.p
               initial={{ opacity: 0, x: -20 }}
@@ -95,17 +89,10 @@ const IntroComponent = () => {
               transition={{ delay: 1.2, duration: 0.8 }}
               className="mb-2"
             >
-              A <span className="italic text-blue-600 hover:text-blue-700 transition-colors duration-300">Full Stack Developer</span>
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 1.4, duration: 0.8 }}
-              className="flex flex-wrap items-center justify-center gap-2"
-            >
-              <span>specialized in</span>
-              <span className="text-blue-600 hover:text-blue-700 transition-colors duration-300">MERN</span>
-              <span>Stack.</span>
+              I craft websites that
+              <span className="italic text-blue-600 hover:text-blue-700 transition-colors duration-300"> tell stories</span>,
+              <span className="italic text-blue-600 hover:text-blue-700 transition-colors duration-300"> drive results</span>, and
+              <span className="italic text-blue-600 hover:text-blue-700 transition-colors duration-300"> stand out</span>.
             </motion.p>
           </div>
         </motion.div>

@@ -28,11 +28,11 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-sm font-medium text-gray-900 uppercase tracking-wider">Connect</h4>
             <nav className="flex flex-col space-y-2">
-              <a href="https://x.com" className="text-gray-500 hover:text-gray-700">x.com</a>
-              <a href="https://instagram.com" className="text-gray-500 hover:text-gray-700">Instagram</a>
-              <a href="https://linkedin.com" className="text-gray-500 hover:text-gray-700">LinkedIn</a>
-              <a href="https://dribbble.com" className="text-gray-500 hover:text-gray-700">Dribbble</a>
-              <a href="https://behance.net" className="text-gray-500 hover:text-gray-700">Behance</a>
+              {/* <a href="https://x.com" className="text-gray-500 hover:text-gray-700">x.com</a> */}
+              <a href="https://www.instagram.com/mr__rathore01/" className="text-gray-500 hover:text-gray-700">Instagram</a>
+              <a href="ttps://www.linkedin.com/in/jeetendra-singh-rathore/" className="text-gray-500 hover:text-gray-700">LinkedIn</a>
+              <a href="https://github.com/jeet-code27" className="text-gray-500 hover:text-gray-700">GitHub</a>
+              {/* <a href="https://behance.net" className="text-gray-500 hover:text-gray-700">Behance</a> */}
             </nav>
           </div>
         </div>

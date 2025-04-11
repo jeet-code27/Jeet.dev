@@ -1,15 +1,15 @@
 import React from 'react';
-import { Github, Linkedin } from 'lucide-react';
+import { Github, Instagram, Linkedin } from 'lucide-react';
 
 const AboutMe = () => {
   const services = [
-    "Full Stack Development", "SEO Optimization", "API Development",
-    "Database Design", "Performance Optimization", "Technical Consulting"
+    "Full Stack Web Development", "SEO Optimization", "Digital Marketing",
+    "Custom Web development", "Performance Optimization", "Google My Buisness Profile Optimization"
   ];
 
   const technologies = [
-    "MongoDB", "Express.js", "React.js", "Node.js",
-    "Next.js", "TypeScript", "TailwindCSS", "Redux"
+    "Next.js", "MongoDB", "Express.js", "React.js", "Node.js",
+    "Shopify", "Wordpress","TypeScript", "TailwindCSS", "Redux" 
   ];
 
   return (
@@ -80,13 +80,20 @@ const AboutMe = () => {
               >
                 <Linkedin className="w-5 h-5" />
               </a>
+              <a 
+                href="https://www.instagram.com/mr__rathore01/" 
+                 target='_blank'
+                className="hover:opacity-70 transition-opacity"
+              >
+                <Instagram className="w-5 h-5" />
+              </a>
             </div>
           </div>
 
           {/* Right Content */}
           <div className="relative order-first md:order-last">
             <img 
-              src="/api/placeholder/600/800"
+              src="/images/final.png"
               alt="Profile" 
               className="w-full h-[400px] md:h-[600px] object-cover rounded-lg"
             />

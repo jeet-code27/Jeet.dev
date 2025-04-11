@@ -36,7 +36,8 @@ const PortfolioSection = () => {
           variants={itemVariants}
           className="font-serif text-5xl mb-16 text-center "
         >
-          Stuff I'm good at
+         My Skills and Team Expertise
+
         </motion.h1>
 
         {/* Content Container */}
@@ -46,14 +47,13 @@ const PortfolioSection = () => {
             variants={itemVariants}
             className="w-full md:w-7/12"
           >
-            <p className="text-gray-800 leading-relaxed text-lg text-center md:text-left">
-              I'm a full-stack web developer passionate about crafting clean, 
-              efficient, and scalable solutions. With expertise in modern frameworks 
-              and development practices, I transform complex requirements into 
-              robust applications. From API design and database architecture to 
-              responsive frontends and optimization, I bring a comprehensive 
-              approach to every project, ensuring both technical excellence and 
-              exceptional user experience.
+            <p className="text-gray-800 leading-relaxed text-justify text-lg  md:text-justify">
+            I'm a MERN Stack Developer who builds fast, mobile-friendly, and scalable websites. I have strong experience in SEO, performance optimization, and modern tools like React, Next.js, and Tailwind CSS. I focus on creating websites that look great, load quickly, and help businesses grow online.
+<br/>
+<br/>
+Along with web development, I also offer services like Google My Business optimization and digital marketing to boost your online presence. I work with a team of skilled professionals who are experts in their fields—whether it's logo design, SEO, video editing, content creation, or more. Together, we deliver complete digital solutions that bring real results for clients across the world.
+
+
             </p>
           </motion.div>
 
@@ -66,11 +66,13 @@ const PortfolioSection = () => {
               variants={itemVariants}
               className="space-y-8 text-center md:text-left w-full"
             >
-              <div className="font-serif text-3xl">Consultations</div>
-              <div className="font-serif text-3xl">App Design</div>
-              <div className="font-serif text-3xl">Web Design</div>
-              <div className="font-serif text-3xl">Webflow</div>
-              <div className="font-serif text-3xl">Print Design</div>
+              <div className="font-serif text-3xl">Web Development</div>
+              <div className="font-serif text-3xl">SEO Optimization</div>
+              <div className="font-serif text-3xl">Digital Marketing</div>
+              <div className="font-serif text-3xl">Google My Buisness Profile Optimization</div>
+              <div className="font-serif text-3xl">Logo Design</div>
+              <div className="font-serif text-3xl">Video Editing</div>
+
             </motion.div>
           </motion.div>
         </motion.div>
