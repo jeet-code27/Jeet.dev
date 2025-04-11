@@ -79,7 +79,7 @@ const Work = () => {
             category="Hiring Support"
             title="Hiring Support System – Ambuja Foundation"
             description="A user-role-based hiring support system designed to streamline HR processes and enhance candidate selection."
-            imageSrc="/images/ambuja.png"
+            imageSrc="/images/ambuja.webp"
             projectLink="https://hiringsupportaf.in/"
           />
 
@@ -87,7 +87,7 @@ const Work = () => {
           category="Doctor Website"
           title="Bone and Joints – Orthopaedic Surgeon Website"
           description="A modern website built for an orthopaedic surgeon featuring patient consultation booking and an admin panel to manage and view appointments."
-          imageSrc="/images/boneandjointslaptop.png"
+          imageSrc="/images/boneandjointslaptop.webp"
           projectLink="https://boneandjoints.in/"
         />
 
@@ -95,7 +95,7 @@ const Work = () => {
           category="Architecture & Design"
           title="DS Concept – Architecture & Design "
           description="A modern architectural firm website showcasing projects with a seamless content management system and intuitive UI."
-          imageSrc="/images/dsc-laptop.png"
+          imageSrc="/images/dsc-laptop.webp"
           projectLink="https://dsconcept.in/"
         />
         
@@ -103,7 +103,7 @@ const Work = () => {
           category="Pharmaceutical Website"
           title="Morganics"
           description="A sleek and professional pharmaceutical company website built with Next.js, featuring fast performance and fully optimized for search engines."
-          imageSrc="/images/morganics-laptop.png"
+          imageSrc="/images/morganics-laptop.webp"
           projectLink="https://morganics.in/"
         />
 
@@ -111,7 +111,7 @@ const Work = () => {
           category="Digital Marketing Website"
           title="Seocial Media Solutions – Digital Marketing Agency"
           description="A fully responsive React-based website for a digital marketing company, designed to showcase services, client results, and drive conversions."
-          imageSrc="/images/seo-laptop.png"
+          imageSrc="/images/seo-laptop.webp"
           projectLink="https://seocialmedia.in/"
         />
         
@@ -119,14 +119,14 @@ const Work = () => {
           category="Hotel Website"
           title="Sarovar Portico – Premium Hotel Website"
           description="A modern and elegant hotel website highlighting rooms, amenities, and bookings, crafted for an exceptional user experience and seamless mobile responsiveness."
-          imageSrc="/images/hotel-laptop.png"
+          imageSrc="/images/hotel-laptop.webp"
           projectLink="https://sarovar-portico-hotel.vercel.app/"
         />
         <ProjectCard 
   category="Portfolio Website"
   title="Personal Portfolio – HTML, CSS & JavaScript"
   description="My first personal portfolio website built using HTML, CSS, and JavaScript, showcasing my projects, skills, and contact information with a clean and simple layout."
-  imageSrc="/images/port-laptop.png"
+  imageSrc="/images/port-laptop.webp"
   projectLink="https://jeet-code27.github.io/jeetendra.github.io/"
 />
         </div>

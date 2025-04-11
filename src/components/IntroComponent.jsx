@@ -23,7 +23,7 @@ const IntroComponent = () => {
           <div className="relative w-full h-full transition-transform duration-500 preserve-3d group-hover:rotate-y-180">
             <div className="absolute w-full h-full backface-hidden rounded-2xl overflow-hidden shadow-lg">
               <img
-                src="images/finall.png"
+                src="images/finall.webp"
                 alt="Profile"
                 className="w-full h-full object-fit border-4 border-white"
               />

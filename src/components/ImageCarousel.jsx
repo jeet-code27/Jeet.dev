@@ -10,37 +10,37 @@ const ImageSlider = () => {
   const images = [
     {
       id: 1,
-      url: "/images/boneandjointslaptop.png",
+      url: "/images/boneandjointslaptop.webp",
       alt: "Design mockup with yellow background"
     },
     {
       id: 2,
-      url: "/images/ambuja.png",
+      url: "/images/ambuja.webp",
       alt: "iMac display with orange screen"
     },
     {
       id: 3,
-      url: "/images/dsc-laptop.png",
+      url: "/images/dsc-laptop.webp",
       alt: "Typography design mockup"
     },
     {
       id: 4,
-      url: "/images/seo-laptop.png",
+      url: "/images/seo-laptop.webp",
       alt: "Design sample 4"
     },
     {
       id: 5,
-      url: "/images/morganics-laptop.png",
+      url: "/images/morganics-laptop.webp",
       alt: "Design sample 5"
     },
     {
       id: 6,
-      url: "/images/port-laptop.png",
+      url: "/images/port-laptop.webp",
       alt: "Design sample 6"
     },
     {
       id: 7,
-      url: "/images/hotel-laptop.png",
+      url: "/images/hotel-laptop.webp",
       alt: "Design sample 7"
     }
   ];

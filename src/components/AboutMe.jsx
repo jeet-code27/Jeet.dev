@@ -93,7 +93,7 @@ const AboutMe = () => {
           {/* Right Content */}
           <div className="relative order-first md:order-last">
             <img 
-              src="/images/final.png"
+              src="/images/final.webp"
               alt="Profile" 
               className="w-full h-[400px] md:h-[600px] object-cover rounded-lg"
             />

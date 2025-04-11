@@ -38,9 +38,9 @@ const About = () => {
             {/* Front of card */}
             <div className="absolute w-full h-full backface-hidden rounded-2xl overflow-hidden shadow-lg border-4 border-white">
               <img
-                src="images/final.png"
+                src="images/final.webp"
                 alt="Profile"
-                className="w-full h-full object-cpver"
+                className="w-full h-full object-cover"
               />
             </div>
             

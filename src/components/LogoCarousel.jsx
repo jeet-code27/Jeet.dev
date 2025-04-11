@@ -4,11 +4,11 @@ import Carousel from 'react-multi-carousel';
 const LogoCarousel = () => {
   // Sample logo data array with image URLs
   const logos = [
-    { id: 1, image: "/images/ambujalogo.jpg" },
-    { id: 2, image: "/images/dsc-logo.jpg" },
-    { id: 3, image: "/images/morganics-logo.png" },
-    { id: 4, image: "/images/sms-logo.jpeg" },
-    { id: 5, image: "/images/hotel-logo.png" },
+    { id: 1, image: "/images/ambujalogo.webp" },
+    { id: 2, image: "/images/dsc-logo.webp" },
+    { id: 3, image: "/images/morganics-logo.webp" },
+    { id: 4, image: "/images/sms-logo.webp" },
+    { id: 5, image: "/images/hotel-logo.webp" },
     // { id: 6, image: "/api/placeholder/200/100" }
   ];
 

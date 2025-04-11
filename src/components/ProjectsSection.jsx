@@ -108,7 +108,7 @@ function ProjectsSection() {
             category="Hiring Support"
             title="Hiring Support System – Ambuja Foundation"
             description="A user-role-based hiring support system designed to streamline HR processes and enhance candidate selection."
-            imageSrc="/images/ambujafoundation.png"
+            imageSrc="/images/ambujafoundation.webp"
             projectLink="https://hiringsupportaf.in/"
           />
 
@@ -116,7 +116,7 @@ function ProjectsSection() {
   category="Doctor Website"
   title="Bone and Joints – Orthopaedic Surgeon Website"
   description="A modern website built for an orthopaedic surgeon featuring patient consultation booking and an admin panel to manage and view appointments."
-  imageSrc="/images/boneandjoints.png"
+  imageSrc="/images/boneandjoints.webp"
   projectLink="https://boneandjoints.in/"
 />
 
@@ -125,7 +125,7 @@ function ProjectsSection() {
             category="Architecture & Design"
             title="DS Concept – Architecture & Design "
             description="A modern architectural firm website showcasing projects with a seamless content management system and intuitive UI."
-            imageSrc="/images/dsc.png"
+            imageSrc="/images/dsc.webp"
             projectLink="https://dsconcept.in/"
           />
         </div>
