@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -17,10 +18,10 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-sm font-medium text-gray-900 uppercase tracking-wider">Pages</h4>
             <nav className="flex flex-col space-y-2">
-              <a href="/" className="text-gray-500 hover:text-gray-700">Home</a>
-              <a href="/work" className="text-gray-500 hover:text-gray-700">Projects</a>
-              <a href="/about" className="text-gray-500 hover:text-gray-700">About</a>
-              <a href="/contact" className="text-gray-500 hover:text-gray-700">Contact</a>
+              <Link to="/" className="text-gray-500 hover:text-gray-700">Home</Link>
+              <Link to="/work" className="text-gray-500 hover:text-gray-700">Projects</Link>
+              <Link to="/about" className="text-gray-500 hover:text-gray-700">About</Link>
+              <Link to="/contact" className="text-gray-500 hover:text-gray-700">Contact</Link>
             </nav>
           </div>
 
@@ -28,11 +29,24 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-sm font-medium text-gray-900 uppercase tracking-wider">Connect</h4>
             <nav className="flex flex-col space-y-2">
-              {/* <a href="https://x.com" className="text-gray-500 hover:text-gray-700">x.com</a> */}
-              <a href="https://www.instagram.com/mr__rathore01/" className="text-gray-500 hover:text-gray-700">Instagram</a>
-              <a href="ttps://www.linkedin.com/in/jeetendra-singh-rathore/" className="text-gray-500 hover:text-gray-700">LinkedIn</a>
-              <a href="https://github.com/jeet-code27" className="text-gray-500 hover:text-gray-700">GitHub</a>
-              {/* <a href="https://behance.net" className="text-gray-500 hover:text-gray-700">Behance</a> */}
+              <a href="https://www.instagram.com/mr__rathore01/" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 className="text-gray-500 hover:text-gray-700">
+                Instagram
+              </a>
+              <a href="https://www.linkedin.com/in/jeetendra-singh-rathore/" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 className="text-gray-500 hover:text-gray-700">
+                LinkedIn
+              </a>
+              <a href="https://github.com/jeet-code27" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 className="text-gray-500 hover:text-gray-700">
+                GitHub
+              </a>
             </nav>
           </div>
         </div>
