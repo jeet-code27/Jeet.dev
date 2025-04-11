@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const PhotoGallery = () => {
   const images = [
     {
-      src: "/images/cycling.jpeg",
+      src: "/images/cycling.webp",
       alt: "Morning cycling adventure",
       rotate: "-5deg",
       description: "Early morning rides through the city streets. Nothing beats the rush of wind and the peaceful solitude of cycling at dawn.",
