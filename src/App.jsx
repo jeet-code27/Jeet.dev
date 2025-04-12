@@ -5,6 +5,7 @@ import Home from "./components/Home"
 import Work from "./components/Work"
 import About from "./components/About"
 import Contact from "./components/Contact"
+import FloatingContact from "./components/FloatingContact"
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         </Routes>
       </main>
       <BottomNav />
+      <FloatingContact/>
       <Footer />
     </div>
   )

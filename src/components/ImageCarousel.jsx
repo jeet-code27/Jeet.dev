@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
@@ -96,25 +96,47 @@ const ImageSlider = () => {
   const openLightbox = (index) => {
     setSelectedImageIndex(index);
     setLightboxOpen(true);
-    document.body.style.overflow = 'hidden'; // Prevent scrolling when lightbox is open
+    document.body.style.overflow = 'hidden';
   };
 
   const closeLightbox = () => {
     setLightboxOpen(false);
-    document.body.style.overflow = 'auto'; // Re-enable scrolling
+    document.body.style.overflow = 'auto';
   };
 
-  const goToPrevious = () => {
+  const goToPrevious = (e) => {
+    e?.stopPropagation();
     setSelectedImageIndex((prevIndex) => 
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
   };
 
-  const goToNext = () => {
+  const goToNext = (e) => {
+    e?.stopPropagation();
     setSelectedImageIndex((prevIndex) => 
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
   };
+
+  // Handle keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (lightboxOpen) {
+        if (e.key === 'Escape') {
+          closeLightbox();
+        } else if (e.key === 'ArrowLeft') {
+          goToPrevious();
+        } else if (e.key === 'ArrowRight') {
+          goToNext();
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [lightboxOpen]);
 
   return (
     <div className="w-full px-8">
@@ -150,21 +172,31 @@ const ImageSlider = () => {
 
       {/* Lightbox */}
       {lightboxOpen && (
-        <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
+        <div 
+          className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4"
+          onClick={closeLightbox}
+        >
           <button 
-            onClick={closeLightbox}
-            className="absolute top-4 right-4 p-2 rounded-full bg-white/20 hover:bg-white/30 transition-all duration-300"
+            onClick={(e) => {
+              e.stopPropagation();
+              closeLightbox();
+            }}
+            className="absolute top-4 right-4 p-2 rounded-full bg-white/20 hover:bg-white/30 transition-all duration-300 z-50"
+            aria-label="Close lightbox"
+            style={{ touchAction: 'manipulation' }}
           >
             <X className="w-8 h-8 text-white" />
           </button>
 
-          <div className="relative w-full max-w-6xl h-full max-h-[90vh] flex items-center">
+          <div 
+            className="relative w-full max-w-6xl h-full max-h-[90vh] flex items-center"
+            onClick={(e) => e.stopPropagation()}
+          >
             <button 
-              onClick={(e) => {
-                e.stopPropagation();
-                goToPrevious();
-              }}
+              onClick={goToPrevious}
               className="absolute left-4 p-3 rounded-full bg-white/20 hover:bg-white/30 transition-all duration-300 z-10"
+              aria-label="Previous image"
+              style={{ touchAction: 'manipulation' }}
             >
               <ChevronLeft className="w-8 h-8 text-white" />
             </button>
@@ -178,25 +210,32 @@ const ImageSlider = () => {
             </div>
 
             <button 
-              onClick={(e) => {
-                e.stopPropagation();
-                goToNext();
-              }}
+              onClick={goToNext}
               className="absolute right-4 p-3 rounded-full bg-white/20 hover:bg-white/30 transition-all duration-300 z-10"
+              aria-label="Next image"
+              style={{ touchAction: 'manipulation' }}
             >
               <ChevronRight className="w-8 h-8 text-white" />
             </button>
           </div>
 
-          <div className="absolute bottom-8 left-0 right-0 flex justify-center">
+          <div 
+            className="absolute bottom-8 left-0 right-0 flex justify-center"
+            onClick={(e) => e.stopPropagation()}
+          >
             <div className="flex space-x-2">
               {images.map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => setSelectedImageIndex(index)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedImageIndex(index);
+                  }}
                   className={`h-3 w-3 rounded-full transition-all duration-300 ${
                     index === selectedImageIndex ? "bg-white scale-125" : "bg-white/40 hover:bg-white/60"
                   }`}
+                  aria-label={`Go to image ${index + 1}`}
+                  style={{ touchAction: 'manipulation' }}
                 />
               ))}
             </div>

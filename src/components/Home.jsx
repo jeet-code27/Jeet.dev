@@ -6,6 +6,7 @@ import AboutMe from './AboutMe';
 import LogoCarousel from './LogoCarousel';
 import FAQAccordion from './FAQAccordion';
 import HireBanner from './HireBanner';
+import Hero from './Hero';
 
 const Home = () => {
   return (
@@ -32,6 +33,7 @@ const Home = () => {
       
       {/* Main content container */}
       <div className="relative z-10">
+        <Hero/>
         <IntroComponent />
         <ImageCarousel />
         <ProjectsSection />
