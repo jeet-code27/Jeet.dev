@@ -11,6 +11,7 @@ function App() {
   return (
     <div className="min-h-screen">
       <main className="pb-24">
+        <FloatingContact/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/work" element={<Work />} />
@@ -19,7 +20,7 @@ function App() {
         </Routes>
       </main>
       <BottomNav />
-      <FloatingContact/>
+     
       <Footer />
     </div>
   )
