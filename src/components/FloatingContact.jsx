@@ -71,8 +71,8 @@ const FloatingContact = () => {
 
   // Toggle button variants
   const toggleVariants = {
-    open: { rotate: 0 },
-    closed: { rotate: 180 }
+    open: { rotate: 180 },
+    closed: { rotate: 0 }
   };
 
   const ActionButton = ({ onClick, icon, label, bgColor, hoverBgColor, custom }) => (

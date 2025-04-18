@@ -6,6 +6,7 @@ import Work from "./components/Work"
 import About from "./components/About"
 import Contact from "./components/Contact"
 import FloatingContact from "./components/FloatingContact"
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <BottomNav />
      
       <Footer />
+      <Analytics />
     </div>
   )
 }
