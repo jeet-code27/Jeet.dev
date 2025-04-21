@@ -404,7 +404,7 @@ const BoneAndJointsProject = () => {
       </motion.div>
       
       {/* More Projects Section */}
-      <div>
+      {/* <div>
         <h2 className="text-3xl font-serif font-medium text-gray-800 mb-8">More Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <motion.div 
@@ -443,7 +443,26 @@ const BoneAndJointsProject = () => {
             </div>
           </motion.div>
         </div>
-      </div>
+      </div> */}
+       <motion.div 
+                    className="bg-gradient-to-r from-blue-500 to-indigo-600 p-8 rounded-xl text-white text-center"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <h2 className="text-2xl md:text-3xl font-medium mb-4">Interested in similar projects?</h2>
+                    <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+                    From stunning websites to smart SEO and branding, we’re here to support your business every step of the digital journey.
+                    </p>
+                    <motion.a 
+                      href="/contact" 
+                      className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-teal-50 transition-colors"
+                      whileHover={{ y: -3 }}
+                      whileTap={{ y: 0 }}
+                    >
+                      Get in Touch
+                    </motion.a>
+                  </motion.div>
     </div>
   );
 };

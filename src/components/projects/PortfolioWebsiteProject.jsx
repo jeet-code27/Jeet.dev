@@ -9,8 +9,8 @@ const PortfolioWebsiteProject = () => {
     "Interactive skills section with progress bars",
     "Contact form with form validation",
     "Animated page transitions and scrolling effects",
-    "Dark/light mode toggle for better readability",
-    "Project filtering by technology categories"
+    // "Dark/light mode toggle for better readability",
+    // "Project filtering by technology categories"
   ];
   
   const technologies = [
