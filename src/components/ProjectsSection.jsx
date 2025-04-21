@@ -35,7 +35,7 @@ const ProjectCard = ({ title, category, description, imageSrc, projectLink }) =>
         </div>
 
         <div className="p-8 pt-6">
-          <Link to={projectLink} target='_blank'>
+          <Link to={projectLink} >
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -59,7 +59,7 @@ const ProjectCard = ({ title, category, description, imageSrc, projectLink }) =>
             <p className="text-gray-600 text-lg leading-relaxed">{description}</p>
           </div>
           
-          <Link to={projectLink} target='_blank'>
+          <Link to={projectLink} >
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -109,7 +109,7 @@ function ProjectsSection() {
             title="Hiring Support System – Ambuja Foundation"
             description="A user-role-based hiring support system designed to streamline HR processes and enhance candidate selection."
             imageSrc="/images/ambujafoundation.webp"
-            projectLink="https://hiringsupportaf.in/"
+            projectLink="/work/ambujaproject"
           />
 
 <ProjectCard 
@@ -117,7 +117,7 @@ function ProjectsSection() {
   title="Bone and Joints – Orthopaedic Surgeon Website"
   description="A modern website built for an orthopaedic surgeon featuring patient consultation booking and an admin panel to manage and view appointments."
   imageSrc="/images/boneandjoints.webp"
-  projectLink="https://boneandjoints.in/"
+  projectLink="/work/boneadnjoitnsproject"
 />
 
 
@@ -126,7 +126,7 @@ function ProjectsSection() {
             title="DS Concept – Architecture & Design "
             description="A modern architectural firm website showcasing projects with a seamless content management system and intuitive UI."
             imageSrc="/images/dsc.webp"
-            projectLink="https://dsconcept.in/"
+            projectLink="/work/dsconceptproject"
           />
         </div>
 

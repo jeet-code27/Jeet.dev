@@ -32,8 +32,8 @@ const ProjectCard = ({ title, subtitle, description, category, imageSrc, project
           </p>
         </div>
         
-        <a href={projectLink} target="_blank" rel="noopener noreferrer">
-          <button className="mt-8 bg-black text-white px-8 py-4 rounded-full font-medium text-lg w-full md:w-auto hover:bg-gray-800 transition-colors duration-200">
+        <a href={projectLink} rel="noopener noreferrer">
+          <button className="mt-8 bg-black cursor-pointer text-white px-8 py-4 rounded-full font-medium text-lg w-full md:w-auto hover:bg-gray-800 transition-colors duration-200">
             Open Project
           </button>
         </a>
@@ -80,7 +80,7 @@ const Work = () => {
             title="Hiring Support System – Ambuja Foundation"
             description="A user-role-based hiring support system designed to streamline HR processes and enhance candidate selection."
             imageSrc="/images/ambuja.webp"
-            projectLink="https://hiringsupportaf.in/"
+            projectLink="/work/ambujaproject"
           />
 
         <ProjectCard 
@@ -88,7 +88,7 @@ const Work = () => {
           title="Bone and Joints – Orthopaedic Surgeon Website"
           description="A modern website built for an orthopaedic surgeon featuring patient consultation booking and an admin panel to manage and view appointments."
           imageSrc="/images/boneandjointslaptop.webp"
-          projectLink="https://boneandjoints.in/"
+          projectLink="/work/boneadnjoitnsproject"
         />
 
         <ProjectCard 
@@ -96,7 +96,7 @@ const Work = () => {
           title="DS Concept – Architecture & Design "
           description="A modern architectural firm website showcasing projects with a seamless content management system and intuitive UI."
           imageSrc="/images/dsc-laptop.webp"
-          projectLink="https://dsconcept.in/"
+          projectLink="/work/dsconceptproject"
         />
         
         <ProjectCard 
@@ -104,7 +104,7 @@ const Work = () => {
           title="Morganics"
           description="A sleek and professional pharmaceutical company website built with Next.js, featuring fast performance and fully optimized for search engines."
           imageSrc="/images/morganics-laptop.webp"
-          projectLink="https://morganics.in/"
+          projectLink="/work/morganicsproject"
         />
 
         <ProjectCard 
@@ -112,7 +112,7 @@ const Work = () => {
           title="Seocial Media Solutions – Digital Marketing Agency"
           description="A fully responsive React-based website for a digital marketing company, designed to showcase services, client results, and drive conversions."
           imageSrc="/images/seo-laptop.webp"
-          projectLink="https://seocialmedia.in/"
+          projectLink="/work/seocialmediaproject"
         />
         
         <ProjectCard 
@@ -120,14 +120,14 @@ const Work = () => {
           title="Sarovar Portico – Premium Hotel Website"
           description="A modern and elegant hotel website highlighting rooms, amenities, and bookings, crafted for an exceptional user experience and seamless mobile responsiveness."
           imageSrc="/images/hotel-laptop.webp"
-          projectLink="https://sarovar-portico-hotel.vercel.app/"
+          projectLink="/work/hotelproject"
         />
         <ProjectCard 
   category="Portfolio Website"
   title="Personal Portfolio – HTML, CSS & JavaScript"
   description="My first personal portfolio website built using HTML, CSS, and JavaScript, showcasing my projects, skills, and contact information with a clean and simple layout."
   imageSrc="/images/port-laptop.webp"
-  projectLink="https://jeet-code27.github.io/jeetendra.github.io/"
+  projectLink="/work/portfolioproject"
 />
         </div>
       </div>

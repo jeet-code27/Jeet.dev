@@ -7,6 +7,20 @@ import About from "./components/About"
 import Contact from "./components/Contact"
 import FloatingContact from "./components/FloatingContact"
 import { Analytics } from "@vercel/analytics/react"
+import AmbujaProject from "./components/projects/AmbujaProject"
+import BoneAndJointsProject from "./components/projects/BoneAndJointsProject"
+import DSConceptProject from "./components/projects/DSConceptProject"
+import MorganicsProject from "./components/projects/MorganicsProject"
+import SeocialMediaProject from "./components/projects/SeocialMediaProject"
+import HotelWebsiteProject from "./components/projects/HotelWebsiteProject"
+import PortfolioSection from "./components/PortfolioSection"
+import PortfolioWebsiteProject from "./components/projects/PortfolioWebsiteProject"
+
+// Import each project component
+// import AmbujaProject from "./components/projects/AmbujaProject"
+// import ProjectTwo from "./components/projects/ProjectTwo"
+// import ProjectThree from "./components/projects/ProjectThree"
+// Import more project components as needed
 
 function App() {
   return (
@@ -18,6 +32,19 @@ function App() {
           <Route path="/work" element={<Work />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          
+          {/* Individual project routes */}
+          <Route path="/work/ambujaproject" element={<AmbujaProject />} />
+          <Route path="/work/boneadnjoitnsproject" element={<BoneAndJointsProject />} />
+          <Route path="/work/dsconceptproject" element={<DSConceptProject />} />
+          <Route path="/work/morganicsproject" element={<MorganicsProject />} />
+          <Route path="/work/seocialmediaproject" element={<SeocialMediaProject />} />
+          <Route path="/work/hotelproject" element={<HotelWebsiteProject />} />
+          <Route path="/work/portfolioproject" element={<PortfolioWebsiteProject />} />
+
+
+
+          {/* Add more project routes as needed */}
         </Routes>
       </main>
       <BottomNav />
