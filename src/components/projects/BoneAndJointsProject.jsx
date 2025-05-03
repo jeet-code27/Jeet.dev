@@ -83,7 +83,7 @@ const BoneAndJointsProject = () => {
         </div>
         <div className="space-y-1">
           <p className="text-sm text-gray-500">Website</p>
-          <a href="#" className="font-medium text-blue-600 hover:underline">boneandjoints.in</a>
+          <a href="https://boneandjoints.in/" className="font-medium text-blue-600 hover:underline">boneandjoints.in</a>
         </div>
       </div>
       
