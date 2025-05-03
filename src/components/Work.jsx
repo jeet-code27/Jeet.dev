@@ -83,21 +83,29 @@ const Work = () => {
             projectLink="/work/ambujaproject"
           />
 
-        <ProjectCard 
-          category="Doctor Website"
-          title="Bone and Joints – Orthopaedic Surgeon Website"
-          description="A modern website built for an orthopaedic surgeon featuring patient consultation booking and an admin panel to manage and view appointments."
-          imageSrc="/images/boneandjointslaptop.webp"
-          projectLink="/work/boneadnjoitnsproject"
-        />
+<ProjectCard 
+  category="Doctor Website"
+  title="Pediatric & Neonatal Care – Dr. Mayur Goyal"
+  description="A modern website built for Dr. Mayur Goyal, a pediatrician and neonatologist, featuring patient consultation booking and an admin panel to manage and view appointments."
+  imageSrc="/images/drmayurgoyallaptop.webp"
+  projectLink="/work/drmayurgoyalproject"
+/>
 
-        <ProjectCard 
+<ProjectCard 
           category="Architecture & Design"
           title="DS Concept – Architecture & Design "
           description="A modern architectural firm website showcasing projects with a seamless content management system and intuitive UI."
           imageSrc="/images/dsc-laptop.webp"
           projectLink="/work/dsconceptproject"
         />
+        <ProjectCard 
+  category="Doctor Website"
+  title="Holistic Health – Dr. Manish Sharma & Dr. Gauri Mehra"
+  description="A beautifully designed and SEO-optimized website for Dr. Manish Sharma, a general physician, and Dr. Gauri Mehra, a dietician. The site offers appointment booking, patient education, and a clean, modern user experience tailored for holistic wellness."
+  imageSrc="/images/holistichealth-laptop.webp"
+  projectLink="/work/holistichealthproject"
+/>
+
         
         <ProjectCard 
           category="Pharmaceutical Website"
@@ -108,8 +116,19 @@ const Work = () => {
         />
 
         <ProjectCard 
+          category="Doctor Website"
+          title="Bone and Joints – Orthopaedic Surgeon Website"
+          description="A modern website built for an orthopaedic surgeon featuring patient consultation booking and an admin panel to manage and view appointments."
+          imageSrc="/images/boneandjointslaptop.webp"
+          projectLink="/work/boneadnjoitnsproject"
+        />
+
+       
+      
+
+        <ProjectCard 
           category="Digital Marketing Website"
-          title="Seocial Media Solutions – Digital Marketing Agency"
+          title="SEOcial Media Solutions – Digital Marketing Agency"
           description="A fully responsive React-based website for a digital marketing company, designed to showcase services, client results, and drive conversions."
           imageSrc="/images/seo-laptop.webp"
           projectLink="/work/seocialmediaproject"

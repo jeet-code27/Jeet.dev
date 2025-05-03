@@ -114,10 +114,10 @@ function ProjectsSection() {
 
 <ProjectCard 
   category="Doctor Website"
-  title="Bone and Joints – Orthopaedic Surgeon Website"
-  description="A modern website built for an orthopaedic surgeon featuring patient consultation booking and an admin panel to manage and view appointments."
-  imageSrc="/images/boneandjoints.webp"
-  projectLink="/work/boneadnjoitnsproject"
+  title="Pediatric & Neonatal Care – Dr. Mayur Goyal"
+  description="A modern website built for Dr. Mayur Goyal, a pediatrician and neonatologist, featuring patient consultation booking and an admin panel to manage and view appointments."
+  imageSrc="/images/drmayurgoyal.webp"
+  projectLink="/work/drmayurgoyalproject"
 />
 
 
