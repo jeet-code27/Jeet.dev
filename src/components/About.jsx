@@ -32,7 +32,7 @@ const About = () => {
           initial={{ x: -100, y: -100, opacity: 0 }}
           animate={{ x: 0, y: 0, opacity: 1 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
-          className="group perspective w-80 h-80 sm:w-96 sm:h-96 md:w-[500px] md:h-[500px] mx-auto mb-6 sm:mb-8"
+          className="group perspective w-66 h-80 sm:w-70 sm:h-80 md:w-[450px] md:h-[500px] mx-auto mb-6 sm:mb-8"
         >
           <div className="relative w-full h-full transition-transform duration-500 preserve-3d group-hover:rotate-y-180">
             {/* Front of card */}
@@ -66,7 +66,7 @@ const About = () => {
             >
               Hello
             </motion.h1>
-            <motion.div
+            {/* <motion.div
               animate={{ 
                 rotate: [0, -20, 20, -20, 0],
                 transition: { 
@@ -78,7 +78,7 @@ const About = () => {
               className="hover:scale-125 transition-transform duration-300"
             >
               👋
-            </motion.div>
+            </motion.div> */}
             <motion.h1 
               className="font-serif"
               initial={{ opacity: 0, y: 20 }}

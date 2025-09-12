@@ -22,7 +22,7 @@ const AboutMe = () => {
               About me
             </h1>
             
-            <p className="text-gray-800 text-lg leading-relaxed">
+            <p className="text-gray-800 text-lg leading-relaxed text-justify">
               I am a MERN Stack Developer with expertise in SEO optimization and 
               performance tuning. Specializing in building scalable web applications 
               and delivering high-impact digital solutions that drive real business results 

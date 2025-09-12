@@ -17,6 +17,7 @@ import PortfolioSection from "./components/PortfolioSection"
 import PortfolioWebsiteProject from "./components/projects/PortfolioWebsiteProject"
 import DrMayurGoyal from "./components/projects/DrMayurGoyal"
 import HolisticHealthProject from "./components/projects/HolisticHealthProject"
+import BlinkInnProject from "./components/projects/BlinkInnProject"
 
 // Import each project component
 // import AmbujaProject from "./components/projects/AmbujaProject"
@@ -45,6 +46,7 @@ function App() {
           <Route path="/work/portfolioproject" element={<PortfolioWebsiteProject />} />
           <Route path="/work/drmayurgoyalproject" element={<DrMayurGoyal />} />
           <Route path="/work/holistichealthproject" element={<HolisticHealthProject />} />
+           <Route path="/work/blinkinnproject" element={<BlinkInnProject />} />
 
 
 

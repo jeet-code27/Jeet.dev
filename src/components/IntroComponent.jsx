@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const IntroComponent = () => {
-  const [showWave, setShowWave] = useState(false);
+  // const [showWave, setShowWave] = useState(false);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowWave(true);
-    }, 2000);
-    return () => clearTimeout(timer);
-  }, []);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setShowWave(true);
+  //   }, 2000);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
@@ -18,7 +18,7 @@ const IntroComponent = () => {
           initial={{ x: -100, y: -100, opacity: 0 }}
           animate={{ x: 0, y: 0, opacity: 1 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
-          className="group perspective w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mx-auto mb-6 sm:mb-8"
+          className="group perspective w-32 h-40 sm:w-40 sm:h-40 md:w-48 md:h-58 mx-auto mb-6 sm:mb-8"
         >
           <div className="relative w-full h-full transition-transform duration-500 preserve-3d group-hover:rotate-y-180">
             <div className="absolute w-full h-full backface-hidden rounded-2xl overflow-hidden shadow-lg">
@@ -49,7 +49,7 @@ const IntroComponent = () => {
             >
               Hello
             </motion.h1>
-            {showWave && (
+            {/* {showWave && (
               <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ 
@@ -71,7 +71,7 @@ const IntroComponent = () => {
               >
                 <span className="hover:scale-125 transition-transform duration-300">👋</span>
               </motion.div>
-            )}
+            )} */}
             <motion.h1 
               className="font-serif"
               initial={{ opacity: 0, y: 20 }}

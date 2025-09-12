@@ -112,6 +112,15 @@ function ProjectsSection() {
             projectLink="/work/ambujaproject"
           />
 
+          <ProjectCard 
+            category="Hotel Website"
+            title="Blink Inn – Hotel Website"
+            description="A modern and elegant hotel website highlighting rooms, amenities, and bookings, crafted for an exceptional user experience and seamless mobile responsiveness."
+            imageSrc="/images/blink-home.jpg"
+            projectLink="/work/blinkinnproject"
+          />
+
+
 <ProjectCard 
   category="Doctor Website"
   title="Pediatric & Neonatal Care – Dr. Mayur Goyal"

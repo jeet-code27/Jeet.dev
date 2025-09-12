@@ -9,7 +9,7 @@ const LogoCarousel = () => {
     { id: 3, image: "/images/morganics-logo.webp" },
     { id: 4, image: "/images/sms-logo.webp" },
     { id: 5, image: "/images/hotel-logo.webp" },
-    // { id: 6, image: "/api/placeholder/200/100" }
+    { id: 6, image: "/images/blinkinn-logo.webp" }
   ];
 
   const responsive = {

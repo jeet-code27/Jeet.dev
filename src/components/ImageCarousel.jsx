@@ -15,16 +15,21 @@ const ImageSlider = () => {
     },
     {
       id: 2,
-      url: "/images/ambuja.webp",
+      url: "/images/blinkinn.jpg",
       alt: "iMac display with orange screen"
     },
     {
       id: 3,
+      url: "/images/ambujafoundation.jpg",
+      alt: "iMac display with orange screen"
+    },
+    {
+      id: 4,
       url: "/images/dsc-laptop.webp",
       alt: "Typography design mockup"
     },
     {
-      id: 4,
+      id: 5,
       url: "/images/seo-laptop.webp",
       alt: "Design sample 4"
     },
@@ -38,11 +43,7 @@ const ImageSlider = () => {
       url: "/images/port-laptop.webp",
       alt: "Design sample 6"
     },
-    {
-      id: 7,
-      url: "/images/hotel-laptop.webp",
-      alt: "Design sample 7"
-    }
+   
   ];
 
   const responsive = {
@@ -139,7 +140,7 @@ const ImageSlider = () => {
   }, [lightboxOpen]);
 
   return (
-    <div className="w-full px-8">
+    <div className="w-full">
       <div className="relative">
         <Carousel
           responsive={responsive}
