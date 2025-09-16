@@ -10,7 +10,7 @@ const ImageSlider = () => {
   const images = [
     {
       id: 1,
-      url: "/images/boneandjointslaptop.webp",
+      url: "/images/boneandjointslaptop.jpg",
       alt: "Design mockup with yellow background"
     },
     {
@@ -25,7 +25,7 @@ const ImageSlider = () => {
     },
     {
       id: 4,
-      url: "/images/dsc-laptop.webp",
+      url: "/images/dsc-laptop.jpg",
       alt: "Typography design mockup"
     },
     {
