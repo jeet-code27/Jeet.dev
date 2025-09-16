@@ -67,7 +67,7 @@ const ImageSlider = () => {
   const CustomDot = ({ onClick, active }) => {
     return (
       <button
-        className={`h-3 w-3 mx-2 rounded-full transition-all duration-300 ${
+        className={`h-3 w-3 mx-2 rounded-full transition-all duration-300  ${
           active ? "bg-blue-600 scale-125" : "bg-gray-300 hover:bg-gray-400"
         }`}
         onClick={onClick}
@@ -82,13 +82,13 @@ const ImageSlider = () => {
           className="absolute -left-4 p-2 rounded-full bg-white/80 backdrop-blur-sm hover:bg-white transition-all duration-300 shadow-lg group"
           onClick={previous}
         >
-          <ChevronLeft className="w-6 h-6 text-gray-700 group-hover:text-gray-900" />
+          <ChevronLeft className="w-6 h-6 text-gray-700 group-hover:text-gray-900 cursor-pointer" />
         </button>
         <button
           className="absolute -right-4 p-2 rounded-full bg-white/80 backdrop-blur-sm hover:bg-white transition-all duration-300 shadow-lg group"
           onClick={next}
         >
-          <ChevronRight className="w-6 h-6 text-gray-700 group-hover:text-gray-900" />
+          <ChevronRight className="w-6 h-6 text-gray-700 group-hover:text-gray-900 cursor-pointer" />
         </button>
       </div>
     );
